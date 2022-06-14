@@ -2854,6 +2854,8 @@ section .title-msg{
 }
 .section-img-1 {    
     padding: 0px 10px 10px 0px; 
+    width: 200px; 
+    height: 200px;
 }
 .text-align-right{
     text-align: right;
@@ -2884,7 +2886,7 @@ img {
 
 
 .fademotion {
-    opacity: 0.5; 
+    opacity: 0.2; 
 }
 .fade-in-Down{
     opacity: 1;
@@ -2893,7 +2895,7 @@ img {
 }
 .fade-in-Left {
     opacity: 1;
-    transform: translateX(55%); 
+    transform: translateX(120%); 
     transition:all 1s;
 }
 
