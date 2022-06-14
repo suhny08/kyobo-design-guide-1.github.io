@@ -2884,7 +2884,7 @@ img {
 
 
 .fademotion {
-    opacity: 0.7;
+    opacity: 0.5; 
 }
 .fade-in-Down{
     opacity: 1;
@@ -2893,11 +2893,11 @@ img {
 }
 .fade-in-Left {
     opacity: 1;
-    transform: translateX(45%); 
+    transform: translateX(55%); 
     transition:all 1s;
 }
 
 .fade-in-Vis {
     opacity: 1;
-    transition: all 1s;
+    transition: all 1.5s;
 }
