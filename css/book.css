@@ -2895,7 +2895,9 @@ img {
 }
 .fade-in-Left {
     opacity: 1;
-    transform: translateX(120%); 
+    -webkit-transform: translateX(80%); 
+    -ms-transform: translateX(80%); 
+    transform: translateX(80%); 
     transition:all 1s;
 }
 
