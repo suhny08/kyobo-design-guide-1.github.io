@@ -14,7 +14,7 @@
         }
     </script>
 </head>
-<body style="height: 3000px">
+<body >
     <div class="wrap-contents">
         <header>
             <a href="javascript:;"><span>Header</span></a>
@@ -36,7 +36,7 @@
             </p>
         </div>
 
-        <!-- <div style="height: 400px;"></div> -->
+        <div style="height: 200px;"></div>
 
         <div style="background: white; height: 320px; margin: 0 20px; border-radius: 20px;">
             <div class="detail-contbox">
@@ -76,7 +76,10 @@
             </div>
         </section>
 
-        
+
+        <div class="bg-1" style="height: 200px;"></div>
+
+
         <section class="bg-1">
             <div class="pt-50 text-align-center">
                 <span>위염이 직장인들의 만성질환이긴 하지만</span>
@@ -114,6 +117,7 @@
     
     <script>
         $(function () {
+
             $(".btn-close").on("click",function(){
                 $(".thumbnail-box").removeClass("on")
                 $("body").removeClass("fixed")
@@ -126,7 +130,6 @@
                 entries.forEach((entry) => {
                     const container = entry.target
                     if (entry.isIntersecting) {
-                        console.log(entry);
                         if (container.id === "section-img-1") {
                         container.classList.add("fade-in-Left")   
                         } else if(container.id === "section-1") {
@@ -166,27 +169,7 @@
                     width:scrollPercent+"%"
                 })
             }
-                
-
-            // $(window).scroll(function () {
-            //     if ($(this).scrollTop() > 50) {
-            //         $('header').slideDown()  
-            //         $("header").find(".btn-close").on("click",function(){
-            //             $("header").addClass("active")
-            //         })
-            //     } else if ( $(this).scrollTop() <= 50 ) {
-            //         $("header").removeClass("active")
-            //         $('header').slideUp() 
-            //     } else {
-            //         $("header").removeClass("active")
-            //     }
-            //     getProgressBar()
-            // })
-            // function init(){
-			//     getProgressBar()
-		    // }
-
-            
+                            
             $(window).scroll(function () {
                 if ($(this).scrollTop() > 50) {
                     $("header").addClass("active")
@@ -196,8 +179,42 @@
                     $("header").removeClass("active")
                 }
             })
-            
+                
+            function onClickStarPointsBox(){
+                const starPointsBox = document.querySelector('#star-points-box');
+                const emptyStars = [...starPointsBox.querySelectorAll('.empty-star')];
+                const paintedStars = [...starPointsBox.querySelectorAll('.painted-star')];
+                starPointsBox.addEventListener('click',event=>{
+                    let clickedStar =
+                        emptyStars.map((node,idx)=>{
+                            return {idx, star:node}
+                        }).filter(node=>node.star===event.target)[0];
+                    clickedStar = clickedStar ||
+                        paintedStars.map((node,idx)=>{
+                            return {idx, star:node}
+                        }).filter(node=>node.star===event.target)[0];
+
+                    emptyStars.forEach((node,idx)=>{
+                        if(idx<=clickedStar.idx) {
+                            node.classList.add('display-none');
+                            paintedStars[idx].classList.remove('display-none');
+                        }else{
+                            node.classList.remove('display-none');
+                            paintedStars[idx].classList.add('display-none');
+                        }
+                    });
+                })
+            }
+
+            function init(){
+			    onClickStarPointsBox()
+		    }
+
+		    init(); 
+
         })
+
+        
     </script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver"></script>
 </body>

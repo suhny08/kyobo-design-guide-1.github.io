@@ -2950,7 +2950,8 @@ section .title-msg{
     padding: 0 10px 2px;
 }
 .empty-star, .painted-star{
-    padding:5px
+    padding:5px;  
+    min-height: 0px !important;
 }
 .display-none{
     display: none;
@@ -2958,6 +2959,10 @@ section .title-msg{
 
 .fc-white{
     color: white;
+}
+.star-img {
+    max-width: "";
+    min-height: "";
 }
 
 textarea{
@@ -2982,3 +2987,4 @@ button{
     border-radius: 5px;
     height: 40px;
 }
+
