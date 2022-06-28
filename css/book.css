@@ -319,15 +319,18 @@ body.fixed {
 
 .wrap-contents header a {
     position: absolute;
-    left: 15px;
+    left: 10px;
     top: 15px;
     display: block;
     width: 50px;
     height: 20px;
     line-height: 20px;
-    background-color: #00347a;
+    /* background-color: #3786ec; */
     border-radius: 10px;
     text-align: center
+}
+.wrap-contents header a:nth-child(2) {
+    left: 35px;
 }
 
 .wrap-contents header a span {
@@ -371,7 +374,7 @@ body.fixed {
     font-style: normal;
     line-height: 1.88;
     letter-spacing: -0.8px;
-    color: #000;
+    color: #fff;
     padding-left: 75px;
     position: absolute;
     top: 10px;
