@@ -2256,7 +2256,7 @@ body.fixed {
 
 .wrap-contents section img {
     max-width: 100%;
-    min-height: 150px
+    min-height: 150px;
 }
 
 .wrap-contents section h2 {
@@ -2899,9 +2899,12 @@ section .title-msg{
 }
 .section-img-1 {    
     padding: 0px 10px 10px 0px; 
+    display: block;
+    text-align: right;
+}
+.section-img-1 img {
     width: 200px; 
-    height: 200px;
-    display: inline-block;
+    height: 200px; 
 }
 .text-align-right{
     text-align: right;
@@ -2928,7 +2931,7 @@ section .title-msg{
 
 
 .fademotion {
-    opacity: 0.2; 
+    opacity: 0.1; 
 }
 .fade-in-Down{
     opacity: 1;
@@ -2937,10 +2940,10 @@ section .title-msg{
 }
 .fade-in-Left {
     opacity: 1;
-    -webkit-transform: translateX(80%); 
+    /* -webkit-transform: translateX(80%); 
     -ms-transform: translateX(80%); 
     transform: translateX(80%); 
-    transition:all 1s;
+    transition:all 1s; */
 }
 
 .fade-in-Vis {

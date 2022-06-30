@@ -56,7 +56,7 @@
             </div>
         </div>
         
-        <div class="detail-contbox fademotion">
+        <div class="detail-contbox fademotion" id="vertical-box">
             <h2>지금부터<br/>
                 다양한 위염의 종류와 증상을<br/>
                 알아볼게요
@@ -67,8 +67,8 @@
         </div>
 
         <section class="mt-100 pt-100 bg-1 ">
-            <span class="section-1 fademotion" id="section-1">
-            <div class="title-msg ">
+             <span class="section-1 fademotion" id="section-1">
+             <div class="title-msg ">
                 <span class="section-no fw-600">1</span>
                 <h2>내시경은 이상 무? '신경성 위염'</h2>                
             </div>
@@ -76,9 +76,19 @@
                 내시경 상으로 이상이 없으나<br/>
                 복통을 호소하는 경우 신경성 위염
             </p>
-        </span>
+            </span>
             <div class="section-img-1 fademotion" id="section-img-1">
                 <img src="../img/2.gif" alt="이미지2">
+            </div>
+            <span class="section-1 fademotion" id="section-1">
+                <p class="text">
+                    명칭은 '기능성 소화 불량증'으로 <br/> 
+                    스트레스가 많은 직장인과 학생들에게 <br/> 
+                    흔히 나타나는 편이에요
+                </p>
+            </span>
+            <div class="section-img-1 fademotion" id="section-img-1">
+                <img src="../img/1.gif" alt="이미지1">
             </div>
         </section>
 
@@ -129,26 +139,26 @@
                 $("body").removeClass("fixed")
             })
 
-
             // interSectionObserver            
-            const targets = document.querySelectorAll(".fademotion")            
+            const targets = document.querySelectorAll(".fademotion")                        
+            console.log(targets)
             const observer = new IntersectionObserver(function (entries, observer) {
                 entries.forEach((entry) => {
                     const container = entry.target
                     if (entry.isIntersecting) {
                         if (container.id === "section-img-1") {
-                        container.classList.add("fade-in-Left")   
+                            container.classList.add("fade-in-Vis")
                         } else if(container.id === "section-1") {
                             container.classList.add("fade-in-Vis")
-                        } else {
+                        } else if (container.id === "vertical-box") {
                             container.classList.add("fade-in-Down")
                         }
                     } else {
                         if (container.id === "section-img-1") {
-                        container.classList.remove("fade-in-Left")
+                            container.classList.remove("fade-in-Vis")
                         } else if(container.id === "section-1") {
                             container.classList.remove("fade-in-Vis")
-                        } else {
+                        } else if (container.id === "vertical-box") {
                             container.classList.remove("fade-in-Down")
                         }
                     }
