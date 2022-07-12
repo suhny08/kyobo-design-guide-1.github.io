@@ -6,12 +6,10 @@ window.addEventListener('scroll', () => {
     
     let a=360/1000, b=-198
     let scrolled = window.scrollY * a + b // from 0 to 360
-    // x : 555 = scrolled : 360
-    // scrolled * 555 = x * 360
-    // x = (scrolled*555)/360
+    let inWidth = window.innerWidth
 
-    if (scrolled >= 0 && scrolled <= 240) {
-        let tmp = (scrolled*555)/360
+    if (scrolled >= 10 && scrolled <= 180) { // 
+        let tmp = (scrolled*inWidth)/360
         // img3.style.left = tmp + 'px'
         // img3.style.transform.translateX = scrolled + 'px'
         img3.style.transform = "translateX(" + scrolled + "px)"
