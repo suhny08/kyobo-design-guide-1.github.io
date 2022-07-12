@@ -2255,7 +2255,7 @@ body.fixed {
 }
 
 .wrap-contents section img {
-    max-width: 100%;
+    /* max-width: 100%; */
     min-height: 150px;
 }
 
@@ -2906,6 +2906,17 @@ section .title-msg{
     width: 200px; 
     height: 200px; 
 }
+.section-img-3 {    
+    padding: 0px 10px 10px 0px; 
+    display: block;
+    position: relative;
+    display: inline-block;
+}
+.section-img-3 img {
+    width: 200px; 
+    height: 200px; 
+    position: absolute;
+}
 .text-align-right{
     text-align: right;
     padding: 0px 10px 10px 0px; 
@@ -2940,12 +2951,18 @@ section .title-msg{
 }
 .fade-in-Left {
     opacity: 1;
-    /* -webkit-transform: translateX(80%); 
-    -ms-transform: translateX(80%); 
-    transform: translateX(80%); 
-    transition:all 1s; */
+    -webkit-transform: translateX(-100px); 
+    -ms-transform: translateX(-100px); 
+    transform: translateX(-100px); 
+    transition:all 1s;
 }
-
+.fade-in-Right {
+    opacity: 1;
+    -webkit-transform: translateX(100px); 
+    -ms-transform: translateX(100px); 
+    transform: translateX(100px); 
+    transition:all 1s;
+}
 .fade-in-Vis {
     opacity: 1;
     transition: all 1.5s;
@@ -2995,3 +3012,8 @@ button{
     height: 40px;
 }
 
+
+
+.scroll-active {
+    background-color: red;
+}

@@ -16,7 +16,7 @@
     </script>
 </head>
 <body >
-    <div class="wrap-contents">
+    <div class="wrap-contents" id="wrap-contents">
         <header>
             <a href="javascript:;">
                 <span><i class="fa-solid fa-arrow-left"></i></span>
@@ -65,7 +65,6 @@
                 <div class="animation-vertical"></div>
             </div>
         </div>
-
         <section class="mt-100 pt-100 bg-1 ">
              <span class="section-1 fademotion" id="section-1">
              <div class="title-msg ">
@@ -87,13 +86,13 @@
                     흔히 나타나는 편이에요
                 </p>
             </span>
-            <div class="section-img-1 fademotion" id="section-img-1">
-                <img src="../img/1.gif" alt="이미지1">
+            <div class="section-img-3 fademotion" id="section-img-3">
+                <img src="../img/3.gif" alt="이미지3">
             </div>
         </section>
 
 
-        <!-- <div class="bg-1" style="height: 200px;"></div> -->
+        <div class="bg-1" style="height: 800px;"></div>
 
 
         <section class="bg-1">
@@ -140,8 +139,7 @@
             })
 
             // interSectionObserver            
-            const targets = document.querySelectorAll(".fademotion")                        
-            console.log(targets)
+            const targets = document.querySelectorAll(".fademotion")                                    
             const observer = new IntersectionObserver(function (entries, observer) {
                 entries.forEach((entry) => {
                     const container = entry.target
@@ -152,6 +150,8 @@
                             container.classList.add("fade-in-Vis")
                         } else if (container.id === "vertical-box") {
                             container.classList.add("fade-in-Down")
+                        }  else if (container.id === "section-img-3") {
+                            container.classList.add("fade-in-Vis")
                         }
                     } else {
                         if (container.id === "section-img-1") {
@@ -160,6 +160,8 @@
                             container.classList.remove("fade-in-Vis")
                         } else if (container.id === "vertical-box") {
                             container.classList.remove("fade-in-Down")
+                        } else if (container.id === "section-img-3") {
+                            container.classList.remove("fade-in-Vis")
                         }
                     }
                 })
@@ -233,5 +235,7 @@
         
     </script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver"></script>
+    <script src="../js/scroll.js"></script>
+    <script src="../js/io.js"></script>
 </body>
 </html>
