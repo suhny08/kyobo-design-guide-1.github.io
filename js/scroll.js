@@ -10,11 +10,12 @@ window.addEventListener('scroll', () => {
     // scrolled * 555 = x * 360
     // x = (scrolled*555)/360
 
-    if (scrolled >= 50 && scrolled <= 300) {
+    if (scrolled >= 0 && scrolled <= 240) {
         let tmp = (scrolled*555)/360
         // img3.style.left = tmp + 'px'
         // img3.style.transform.translateX = scrolled + 'px'
         img3.style.transform = "translateX(" + scrolled + "px)"
+        img3.style.transition = "all 0.2s"
         console.log(tmp)
     }
     
