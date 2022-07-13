@@ -1,21 +1,23 @@
 
 
 let img3 = document.getElementById('section-img-3')
+let inWidth = window.innerWidth
 
 window.addEventListener('scroll', () => {
     
     let a=360/1000, b=-300
     let scrolled = window.scrollY * a + b // from 0 to 360
-    let inWidth = window.innerWidth
 
-    if (scrolled >= 10 && scrolled <= 180) { // 
+    if (scrolled >= 10 && scrolled <= 200) { // 
         let tmp = (scrolled*inWidth)/360
-        if (tmp > 47) tmp = 47
-        img3.style.left = tmp + '%'
+        let x = (tmp/inWidth)*100
+
+        if (x > 47) x = 47
+        img3.style.left = x + 'vw'
         // img3.style.transform.translateX = scrolled + 'px'
         // img3.style.transform = "translateX(" + tmp + "px)"
         img3.style.transition = "all 0.1s"
-        console.log(tmp)
+        console.log((tmp/inWidth)*100)
     }
     
 
@@ -34,7 +36,7 @@ window.addEventListener('scroll', () => {
 
 
 window.addEventListener('resize', () => {
-    innerWidth = window.innerWidth
+    inWidth = window.innerWidth
 })
 
 
