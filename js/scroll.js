@@ -4,16 +4,17 @@ let img3 = document.getElementById('section-img-3')
 
 window.addEventListener('scroll', () => {
     
-    let a=360/1000, b=-198
+    let a=360/1000, b=-300
     let scrolled = window.scrollY * a + b // from 0 to 360
     let inWidth = window.innerWidth
 
     if (scrolled >= 10 && scrolled <= 180) { // 
         let tmp = (scrolled*inWidth)/360
-        // img3.style.left = tmp + 'px'
+        if (tmp > 47) tmp = 47
+        img3.style.left = tmp + '%'
         // img3.style.transform.translateX = scrolled + 'px'
-        img3.style.transform = "translateX(" + scrolled + "px)"
-        img3.style.transition = "all 0.2s"
+        // img3.style.transform = "translateX(" + tmp + "px)"
+        img3.style.transition = "all 0.1s"
         console.log(tmp)
     }
     
