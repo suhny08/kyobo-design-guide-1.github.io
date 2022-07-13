@@ -355,7 +355,7 @@ body.fixed {
     margin-left: auto;
     width: 30px;
     height: 30px;
-    background: url("../img/ico-gnb-close-black.png")
+    /* background: url("../img/ico-gnb-close-black.png") */
 }
 
 .wrap-contents header a.btn-close span {
@@ -2236,7 +2236,7 @@ body.fixed {
     margin-left: auto;
     width: 30px;
     height: 30px;
-    background: url("../img/ico-gnb-close-black.png")
+    /* background: url("../img/ico-gnb-close-black.png") */
 }
 
 .wrap-contents section .top .btn-close span {
@@ -2414,7 +2414,7 @@ body.fixed {
     left: 0;
     width: 30px;
     height: 30px;
-    background: url("../img/ico-gnb-close-black.png")
+    /* background: url("../img/ico-gnb-close-black.png") */
 }
 
 .wrap-contents .imgbox {
