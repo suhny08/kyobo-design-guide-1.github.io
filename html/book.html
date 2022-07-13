@@ -66,8 +66,8 @@
             </div>
         </div>
         <section class="mt-100 pt-100 bg-1 ">
-             <span class="section-1 fademotion" id="section-1">
-             <div class="title-msg ">
+            <span class="section-1 fademotion" id="section-1">
+            <div class="title-msg ">
                 <span class="section-no fw-600">1</span>
                 <h2>내시경은 이상 무? '신경성 위염'</h2>                
             </div>
@@ -86,13 +86,24 @@
                     흔히 나타나는 편이에요
                 </p>
             </span>
-            <div class="section-img-3 fademotion" id="section-img-3">
+            <div class="section-img-3 fademotion" id="section-img-3" style="padding-bottom: 250px">
+                <img src="../img/3.gif" alt="이미지3">
+            </div>
+
+
+            <span class="section-1 fademotion" id="section-1">
+                <p class="text text-align-center">
+                    정신적 스트레스를 다스리는 것이 가장 중요해요
+                </p>
+            </span>
+            <div class="section-img-4 center fademotion" id="section-img-4" style="padding-bottom: 150px">
+                <img src="../img/1.gif" alt="이미지1">
+                <img src="../img/2.gif" alt="이미지2">
                 <img src="../img/3.gif" alt="이미지3">
             </div>
         </section>
 
 
-        <div class="bg-1" style="height: 800px;"></div>
 
 
         <section class="bg-1">
@@ -152,7 +163,9 @@
                             container.classList.add("fade-in-Vis")
                         } else if (container.id === "vertical-box") {
                             container.classList.add("fade-in-Down")
-                        }  else if (container.id === "section-img-3") {
+                        } else if (container.id === "section-img-3") {
+                            container.classList.add("fade-in-Vis")
+                        } else if (container.id === "section-img-4") {
                             container.classList.add("fade-in-Vis")
                         }
                     } else {
@@ -163,6 +176,8 @@
                         } else if (container.id === "vertical-box") {
                             container.classList.remove("fade-in-Down")
                         } else if (container.id === "section-img-3") {
+                            container.classList.remove("fade-in-Vis")
+                        } else if (container.id === "section-img-4") {
                             container.classList.remove("fade-in-Vis")
                         }
                     }

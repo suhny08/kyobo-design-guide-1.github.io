@@ -2256,7 +2256,7 @@ body.fixed {
 
 .wrap-contents section img {
     /* max-width: 100%; */
-    min-height: 150px;
+    /* min-height: 150px; */
 }
 
 .wrap-contents section h2 {
@@ -2917,6 +2917,11 @@ section .title-msg{
     height: 200px; 
     position: absolute;
 }
+.section-img-4 img {
+    width: 100px; 
+    height: 100px; 
+}
+
 .text-align-right{
     text-align: right;
     padding: 0px 10px 10px 0px; 
@@ -3027,4 +3032,8 @@ button{
     to {
         left: 300px; 
     }
+}
+
+.center {
+    text-align: center;
 }

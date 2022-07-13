@@ -1,24 +1,42 @@
 
 
 let img3 = document.getElementById('section-img-3')
+let img4 = document.getElementById('section-img-4').getElementsByTagName('img');
+
 let inWidth = window.innerWidth
 
 window.addEventListener('scroll', () => {
     
+    // 모바일인경우 from 0 to 360 
+    // 웹인경우 다시 계산
     let a=360/1000, b=-300
-    let scrolled = window.scrollY * a + b // from 0 to 360
+    let scrolled = window.scrollY * a + b
 
-    if (scrolled >= 10 && scrolled <= 200) { // 
+    if (scrolled >= 10 && scrolled <= 200) { 
         let tmp = (scrolled*inWidth)/360
         let x = (tmp/inWidth)*100
 
-        if (x > 47) x = 47
+        if (x > 49) x = 49
         img3.style.left = x + 'vw'
-        // img3.style.transform.translateX = scrolled + 'px'
-        // img3.style.transform = "translateX(" + tmp + "px)"
         img3.style.transition = "all 0.1s"
-        console.log((tmp/inWidth)*100)
     }
+
+    // img4 1180 ~ 1700
+    let img4_x=360/520, img4_y=-817
+    let scrolled2 = window.scrollY * a + b
+    
+    if (scrolled >= 70 && scrolled <= 300) {
+        let tmp = (scrolled*inWidth)/360
+        let x = (tmp/inWidth)*100
+
+        img4[0].style.paddingRight = x + 'px'
+        img4[0].style.transition = "all 0.1s"
+
+        img4[2].style.paddingLeft = x + 'px'
+        img4[2].style.transition = "all 0.1s"
+    }
+    
+
     
 
     // let rect = img3.getBoundingClientRect();
