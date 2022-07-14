@@ -23,17 +23,20 @@ window.addEventListener('scroll', () => {
 
     // img4 1180 ~ 1700
     let img4_x=360/520, img4_y=-817
-    let scrolled2 = window.scrollY * a + b
+    let scrolled2 = window.scrollY * img4_x + img4_y
     
-    if (scrolled >= 70 && scrolled <= 300) {
-        let tmp = (scrolled*inWidth)/360
+    if (scrolled2 >= 30 && scrolled2 <= 300) {
+        let tmp = (scrolled2*inWidth)/360
         let x = (tmp/inWidth)*100
 
+        console.log(x)
+        if (x > 40) x = 40
+
         img4[0].style.paddingRight = x + 'px'
-        img4[0].style.transition = "all 0.1s"
+        img4[0].style.transition = "all 0.2s"
 
         img4[2].style.paddingLeft = x + 'px'
-        img4[2].style.transition = "all 0.1s"
+        img4[2].style.transition = "all 0.2s"
     }
     
 
